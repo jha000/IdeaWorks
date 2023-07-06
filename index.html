@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IdeaWorks - Upskill Program</title>
   <style>
     /* CSS Styles */
@@ -25,7 +26,7 @@
     display: inline-block;
     padding: 10px 20px;
     background-color: #FFFFFF;
-    color: #405690;
+    color: #FF0000;
     font-weight: bold;
     font-size: 16px;
     border-radius: 5px;
@@ -42,12 +43,25 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
 
-    .logo {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+  .logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Center the logo horizontally */
+}
+  
+  .logo img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+  }
 
     .nav {
       background-color: #526D82;
@@ -278,15 +292,85 @@
       opacity: 0.7;
     }
 
+
+    /* CSS Styles */
+/* Add this at the end of the existing styles */
+
+/* Mobile Styles */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 40px;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .section {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .course-list {
+    justify-content: flex-start;
+  }
+
+  .course {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .instructor-list {
+    justify-content: flex-start;
+  }
+
+  .instructor {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .timeline:before {
+    left: 0;
+    transform: none;
+  }
+
+  .timeline-item:before {
+    top: -8px;
+    left: 10px;
+  }
+
+  .footer {
+    padding: 40px;
+  }
+
+  .impact-details {
+    flex-direction: column;
+  }
+
+  .impact-point {
+    margin-bottom: 20px;
+  }
+  
+}
     
   </style>
+
+  
 </head>
 <body>
   <div class="header">
     <img src="logo.png" alt="IdeaWorks Logo" class="logo">
     <h1>Welcome to IdeaWorks</h1>
     <p>Upskill Program</p>
-    <a href="#registration" class="registration-button">Register Now</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_pMU9A49Xh1CC4umU2LcFXPP76RuCvtO0_r_7-eypWEuK8A/viewform?vc=0&c=0&w=1&flr=0" class="registration-button">Register Now</a>
+
   </div>
   
 
@@ -301,7 +385,15 @@
 
   <div class="section" id="overview">
     <h2>Program Overview</h2>
-    <p>IdeaWorks partnered with a leading Indian telecommunications company to solve for their declining customer base. We looked at the company customer retention trends and external market factors to determine the key factors for customer churn. Together with the client marketing team, IdeaWorks developed an AI-powered offer recommendation engine to arrest the declining customer base and increase customer Lifetime value.</p>
+    <p>Welcome to Our IdeaWorks World</p>
+
+      <p>We are a team of Data science and Engineering consultants 
+      With experience of 7+ years in the industry with best of corporate firms .
+      We come together to help people live their corporate dream
+      
+      Come Upskill with us and a Python Analytics Professional
+      We mentor, guide and coach you to be the best Analytics and Engineering professional in the corporate world
+      We have worked with the best in our times, and we want to make you the best.</p>
   </div>
 
   <div class="section" id="courses">
@@ -407,14 +499,7 @@
     <div class="footer-contact">
       <h2>Contact Us</h2>
       <p>If you have any questions or inquiries, feel free to contact us.</p>
-      <p>Phone: +1 123-456-7890</p>
-      <p>Email: info@ideaworks.com</p>
-    </div>
-    <div class="social-media">
-      <a href="https://www.facebook.com/ideaworks" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/ideaworks" target="_blank">Instagram</a>
-      <a href="https://www.linkedin.com/company/ideaworks" target="_blank">LinkedIn</a>
-      <a href="https://twitter.com/ideaworks" target="_blank">Twitter</a>
+      <p>Phone: +91 91274 47197</p>
     </div>
   </footer>
   
