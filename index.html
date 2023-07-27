@@ -4,12 +4,415 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IdeaWorks - Upskill Program</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #DDE6ED;
+    }
+
+    .header {
+      background-image: url("./header1.webp");
+      background-size: cover;
+      background-position: center;
+      padding: 70px;
+      height: 100%;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .registration-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FFFFFF;
+      color: #FF0000;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .registration-button:hover {
+      background-color: #526D82;
+    }
+
+    .registration-button:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      /* Center the logo horizontally */
+    }
+
+    .logo img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 50%;
+    }
+
+    .nav {
+      background-color: #526D82;
+      color: #FFFFFF;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    .nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav ul li a:hover {
+      background-color: #405690;
+    }
+
+    .section {
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      background-color: #FFFFFF;
+      margin-bottom: 40px;
+    }
+
+    .section .text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .section img {
+      flex: 1;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+
+      margin-bottom: 30px;
+
+    }
+
+
+
+    .section .phase {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 40px;
+      text-align: left;
+      width: 100%;
+    }
+
+
+    .section .phase-content {
+      flex: 1;
+    }
+
+    .section .phase-content h3 {
+      color: #27374D;
+      margin-bottom: 10px;
+    }
+
+    .section .phase-content p {
+      margin-bottom: 0;
+    }
+
+
+    h2 {
+      color: #27374D;
+      margin-bottom: 20px;
+    }
+
+    .course-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .course {
+      width: 300px;
+      background-color: #9DB2BF;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .course:hover {
+      transform: scale(1.05);
+    }
+
+    .instructor-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .instructor {
+      width: 300px;
+      margin: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      background-color: #9DB2BF;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .instructor:hover {
+      transform: translateY(-5px);
+    }
+
+    .instructor img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background-color: #526D82;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-content {
+      background-color: #FFFFFF;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .timeline-content h3 {
+      color: #27374D;
+      margin-bottom: 10px;
+    }
+
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #526D82;
+    }
+
+    .timeline-item:nth-child:before {
+      background-color: #FFFFFF;
+    }
+
+
+    footer {
+      background-color: #27374D;
+      color: #FFFFFF;
+      padding: 70px;
+      text-align: center;
+    }
+
+    .footer-contact {
+      margin-bottom: 20px;
+    }
+
+    footer h2 {
+      color: #FFFFFF;
+    }
+
+    .footer-contact p {
+      margin: 0;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-media a {
+      color: #FFFFFF;
+      margin: 0 5px;
+      text-decoration: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .social-media a:hover {
+      opacity: 0.7;
+    }
+
+    .feedback-section {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .feedback-section h2 {
+      text-align: center;
+    }
+
+    .feedback-section form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feedback-section textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .feedback-section button {
+      width: 100px;
+      padding: 5px;
+    }
+
+    .feedback-item {
+      display: inline-block;
+      width: 200px;
+      padding: 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* CSS Styles */
+    /* Add this at the end of the existing styles */
+
+    /* Mobile Styles */
+    @media screen and (max-width: 480px) {
+      .header {
+        padding: 40px;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+      }
+
+      .nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .section {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .course-list {
+        justify-content: flex-start;
+      }
+
+      .course {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .instructor-list {
+        justify-content: flex-start;
+      }
+
+      .instructor {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .timeline:before {
+        left: 0;
+        transform: none;
+      }
+
+      .timeline-item:before {
+        top: -8px;
+        left: 10px;
+      }
+
+      .footer {
+        padding: 40px;
+      }
+
+      .impact-details {
+        flex-direction: column;
+      }
+
+      .impact-point {
+        margin-bottom: 20px;
+      }
+
+      .feedback-section  {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+    }
+  </style>
+
 </head>
 
 <body>
   <div class="header">
-    <img src="./assets/logo.png" alt="IdeaWorks Logo" class="logo">
+    <img src="./logo.png" alt="IdeaWorks Logo" class="logo">
     <h1>Welcome to IdeaWorks</h1>
     <p>Upskill Program</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_pMU9A49Xh1CC4umU2LcFXPP76RuCvtO0_r_7-eypWEuK8A/viewform?vc=0&c=0&w=1&flr=0"
@@ -70,14 +473,14 @@
     <h2>Instructor Information</h2>
     <div class="instructor-list">
       <div class="instructor">
-        <img src="./assets/prakash.png" alt="Instructor 1 Image">
+        <img src="./prakash.png" alt="Instructor 1 Image">
         <h3>Prakash Gupta</h3>
         <p>Worked as a Data Engineer for India's leading consulting firm, Boston Consulting Group. Enhanced the
           engineering analytics of Tesco and scaling Rapido with expertise in Python, Data Engineering, Big Data, and
           DevOps.</p>
       </div>
       <div class="instructor">
-        <img src="./assets/nildip.png" alt="Instructor 2 Image">
+        <img src="./nildip.png" alt="Instructor 2 Image">
         <h3>Nildip Mukherjee</h3>
         <p>Worked as a Data Scientist for India's leading consulting firm, Boston Consulting Group. Helped many clients
           with business recommendations with critical scientific analytics. Assisted leading gaming platforms and Rapido
@@ -129,23 +532,31 @@
         <h3>Clarity of Thought</h3>
         <p>A world for which we aspire, it's important to have a glimpse of what the world is about. Industry
           internships are not an easy catch, but industry exposure - we make it easy for you.</p>
-        <img src="./assets/thought.png" alt="Image 5">
+        <img src="./thought.png" alt="Image 5">
       </div>
       <div class="impact-point">
         <h3>Timing</h3>
         <p>Spending years to learn different skills? What if we use the time to upskill in alignment with the industry?
           Industry is not only about data structures and competitive coding, but a lot more.</p>
-        <img src="./assets/time.png" alt="Image 6">
+        <img src="./time.png" alt="Image 6">
       </div>
       <div class="impact-point">
         <h3>Networking</h3>
         <p>Corporate work is not one-dimensional. There's a lot of variety in work and skills required. Connecting and
           communication still remains the key. No knowledge is enough if it cannot be effectively conveyed.</p>
-        <img src="./assets/networking.png" alt="Image 7">
+        <img src="./networking.png" alt="Image 7">
       </div>
     </div>
   </div>
 
+
+  <div class="feedback-section">
+    <h2>Feedback</h2>
+    <form action="process-feedback.php" method="POST">
+      <textarea name="feedback" placeholder="Enter your feedback"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
   <footer id="contact">
     <div class="footer-contact">
