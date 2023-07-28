@@ -10,11 +10,11 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #DDE6ED;
+      background-color: #edf2f4;
     }
 
     .header {
-      background-image: url("./header1.webp");
+      background-image: url("./header3.png");
       background-size: cover;
       background-position: center;
       padding: 70px;
@@ -27,7 +27,7 @@
       display: inline-block;
       padding: 10px 20px;
       background-color: #FFFFFF;
-      color: #FF0000;
+      color: #cc2936;
       font-weight: bold;
       font-size: 16px;
       border-radius: 5px;
@@ -36,7 +36,7 @@
     }
 
     .registration-button:hover {
-      background-color: #526D82;
+      background-color: #ffe6e6;
     }
 
     .registration-button:focus {
@@ -55,7 +55,6 @@
       padding: 20px;
       box-sizing: border-box;
       margin: 0 auto;
-      /* Center the logo horizontally */
     }
 
     .logo img {
@@ -65,7 +64,7 @@
     }
 
     .nav {
-      background-color: #526D82;
+      background-color: #cc2936;
       color: #FFFFFF;
       padding: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -91,7 +90,7 @@
     }
 
     .nav ul li a:hover {
-      background-color: #405690;
+      background-color: #a71a26;
     }
 
     .section {
@@ -135,7 +134,7 @@
     }
 
     .section .phase-content h3 {
-      color: #27374D;
+      color: #ffcccc;
       margin-bottom: 10px;
     }
 
@@ -145,8 +144,12 @@
 
 
     h2 {
+      color: #000000;
+      margin-bottom: 50px;
+    }
+
+    h3 {
       color: #27374D;
-      margin-bottom: 20px;
     }
 
     .course-list {
@@ -157,7 +160,7 @@
 
     .course {
       width: 300px;
-      background-color: #9DB2BF;
+      background-color: #ccdad1;
       margin: 20px;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -181,7 +184,7 @@
       margin: 20px;
       text-align: center;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      background-color: #9DB2BF;
+      background-color: #ccdad1;
       padding: 20px;
       transition: transform 0.3s ease;
     }
@@ -227,7 +230,7 @@
     }
 
     .timeline-content {
-      background-color: #FFFFFF;
+      background-color: #ccdad1;
       padding: 20px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
@@ -259,9 +262,9 @@
 
 
     footer {
-      background-color: #27374D;
+      background-color: #cc2936;
       color: #FFFFFF;
-      padding: 70px;
+      padding: 30px;
       text-align: center;
     }
 
@@ -293,45 +296,60 @@
       opacity: 0.7;
     }
 
-    .feedback-section {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .feedback-section h2 {
+    .send-message-section {
+      padding: 40px;
       text-align: center;
+      background-color: #FFFFFF;
+      margin-bottom: 40px;
     }
 
-    .feedback-section form {
+    .send-message-section h2 {
+      color: #000000;
+      margin-bottom: 50px;
+    }
+
+    .send-message-section form {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .feedback-section textarea {
-      width: 100%;
-      height: 100px;
+    .send-message-section label {
+      display: block;
+      font-weight: bold;
       margin-bottom: 10px;
     }
 
-    .feedback-section button {
-      width: 100px;
-      padding: 5px;
-    }
-
-    .feedback-item {
-      display: inline-block;
-      width: 200px;
+    .send-message-section input,
+    .send-message-section textarea {
+      width: 100%;
+      max-width: 400px;
       padding: 10px;
-      margin-right: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
 
-    /* CSS Styles */
-    /* Add this at the end of the existing styles */
+    .send-message-section textarea {
+      resize: vertical;
+      height: 150px;
+    }
+
+    .send-message-section button {
+      width: 200px;
+      padding: 10px;
+      background-color: #cc2936;
+      color: #FFFFFF;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .send-message-section button:hover {
+      background-color: #a71a26;
+    }
 
     /* Mobile Styles */
     @media screen and (max-width: 480px) {
@@ -350,7 +368,7 @@
       }
 
       .nav ul li {
-        display: block;
+        display: inline-block;
         margin: 10px 0;
       }
 
@@ -399,12 +417,6 @@
         margin-bottom: 20px;
       }
 
-      .feedback-section  {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-      }
-
     }
   </style>
 
@@ -430,13 +442,11 @@
   </div>
 
   <div class="section" id="overview">
-    <h2>Program Overview</h2>
-    <p>Welcome to Our IdeaWorks World</p>
+    <h2>Welcome to Our IdeaWorks World</h2>
 
     <p>We are a team of Data science and Engineering consultants
       With experience of 7+ years in the industry with best of corporate firms .
       We come together to help people live their corporate dream
-
       Come Upskill with us and a Python Analytics Professional
       We mentor, guide and coach you to be the best Analytics and Engineering professional in the corporate world
       We have worked with the best in our times, and we want to make you the best.</p>
@@ -549,14 +559,22 @@
     </div>
   </div>
 
+  <div class="send-message-section" id="contact">
+    <h2>Send us a message</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-  <div class="feedback-section">
-    <h2>Feedback</h2>
-    <form action="process-feedback.php" method="POST">
-      <textarea name="feedback" placeholder="Enter your feedback"></textarea>
-      <button type="submit">Submit</button>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
   </div>
+
 
   <footer id="contact">
     <div class="footer-contact">
